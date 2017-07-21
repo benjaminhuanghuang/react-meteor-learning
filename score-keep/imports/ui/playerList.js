@@ -8,7 +8,11 @@ export default class PlayerList extends React.Component{
     renderPlayers() {
         if (this.props.players.length ===0 )
         {
-            return <p>Add your player.</p>;
+            return (
+                <div className="item">
+                    <p className="item__message">Add your player.</p>
+                </div>
+            );
         }
         return this.props.players.map((player)=>{
             return <Player key={player._id} player={player}/>;
