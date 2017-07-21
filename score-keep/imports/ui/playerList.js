@@ -24,9 +24,9 @@ export default class PlayerList extends React.Component{
     render(){
         return (
             <div>
-                <FlopMove>
+                <FlipMove>
                     {this.renderPlayers()}
-                </FlopMove>
+                </FlipMove>
             </div>
         );
     }
