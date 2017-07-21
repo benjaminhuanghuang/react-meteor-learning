@@ -12,7 +12,9 @@ export default class App extends React.Component{
                 <TitleBar title={this.props.title} subtitle="Created by Benjamin"/>
                 <div className="wrapper">
                     <PlayerList players={this.props.players}/>
-                    <AddPlayer score={10}/>
+                    <AddPlayer score={10}>
+                        <h1>dddd</h1>
+                    </AddPlayer>
                 </div>
             </div>
         );
