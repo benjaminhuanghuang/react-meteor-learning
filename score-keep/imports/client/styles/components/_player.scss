@@ -1,0 +1,18 @@
+// Player-Enlement
+.player {
+    display: flex;
+    justify-content: space-between; //center, space-around, space-between
+    align-items: center; 
+    &__name {
+        font-weight: 300;
+        font-size: 1.8rem;
+    }
+    &__stats {
+        font-weight: 300;
+        font-size: 1.3rem;
+        font-style: italic;
+    }
+    &__actions {
+        flex-shrink: 0;   //avoid puttong buttongs in new lines
+    }
+}

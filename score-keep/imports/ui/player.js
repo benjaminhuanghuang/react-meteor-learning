@@ -7,12 +7,19 @@ export default class Player extends React.Component{
         player = this.props.player;
         return (
             <div key= {player._id} className="item">
-                <p >
-                    {player.name} has {player.score} point(s).
-                </p>
-                <button className="button button--round" onClick={()=> Players.update(player._id, {$inc:{score:-1}})}>-1x</button>
-                <button className="button button--round" onClick={()=>{Players.update(player._id, {$inc:{score:1}});}}> +1</button>
-                <button className="button button--round" onClick={()=> Players.remove(player._id)}> x</button>
+                <div className="player">
+                    <div>
+                        <h3 className="player__name">{player.name}</h3>
+                        <p className="player__stats">
+                            {player.name} has {player.score} point(s).
+                        </p>
+                    </div>
+                    <div className="player__actions">
+                        <button className="button button--round" onClick={()=> Players.update(player._id, {$inc:{score:-1}})}>-1x</button>
+                        <button className="button button--round" onClick={()=>{Players.update(player._id, {$inc:{score:1}});}}> +1</button>
+                        <button className="button button--round" onClick={()=> Players.remove(player._id)}> x</button>
+                    </div>
+                </div>
             </div>
         );
     }
