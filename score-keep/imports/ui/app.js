@@ -13,7 +13,7 @@ export default class App extends React.Component{
                 <div className="wrapper">
                     <PlayerList players={this.props.players}/>
                     <AddPlayer score={10}>
-                        <h1>dddd</h1>
+                        <h1>New Player</h1>
                     </AddPlayer>
                 </div>
             </div>
