@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; //Sets the font-size to a percent of  the parent element's font size
+}
+
+body {
+    color: #555555;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 2.4rem; //Relative to font-size of the root element
+}
+
+.title-bar {
+    background: #e35557;
+    color: white;
+}
+
+.wrapper {
+    maring: 0 auto;
+    max-width: 50rem;
+    padding: 1.3rem;
+}
