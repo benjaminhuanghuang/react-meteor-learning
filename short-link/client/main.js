@@ -1,19 +1,24 @@
 import React from 'react';
 import ReactDOM  from 'react-dom';
 import { Meteor } from 'meteor/meteor';
-import { Router, Route, browserHistory } from 'react-router';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+// import { Router, Route, Switch } from 'react-router';
 
 import Signup from '../imports/ui/signup';
+import Login from '../imports/ui/login';
 import Link from '../imports/ui/link';
+import NotFound from '../imports/ui/notFound';
 
 const routes=(
-  <Router history={browserHistory}>
-    <Route path="/signup" component={Signup}/>
-  </Router>
+  <BrowserRouter>
+      <Switch>
+      <Route exact path="/" component={Signup}/>
+      <Route exact path="/login" component={Login}/>
+      <Route exact path="/links" component={Link}/>
+      <Route component={NotFound}/> 
+      </Switch>
+  </BrowserRouter>
 );
-
 Meteor.startup(function(){
-    Tracker.autorun(function(){
-        ReactDOM.render(<Signup/>, document.getElementById('app'));
-    });
+  ReactDOM.render(routes, document.getElementById('app'));
 });
