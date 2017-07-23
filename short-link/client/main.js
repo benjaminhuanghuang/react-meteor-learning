@@ -9,11 +9,12 @@ import Login from '../imports/ui/login';
 import Link from '../imports/ui/link';
 import NotFound from '../imports/ui/notFound';
 
+
 const routes=(
   <BrowserRouter>
       <Switch>
-      <Route exact path="/" component={Signup}/>
-      <Route exact path="/login" component={Login}/>
+      <Route exact path="/" component={Login}/>
+      <Route exact path="/signup" component={Signup}/>
       <Route exact path="/links" component={Link}/>
       <Route component={NotFound}/> 
       </Switch>

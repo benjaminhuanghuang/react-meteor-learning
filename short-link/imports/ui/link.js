@@ -1,7 +1,13 @@
 import React from 'react';
+import { browserHistory } from 'react-router';
 
 export default class Link extends React.Component{
   render(){
-    return <p> Link</p>;
+    return (
+      <div>
+        <h1>Your Links</h1>
+        <button>Logout</button>
+      </div>
+    );
   }
 }
